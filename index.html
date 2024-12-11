@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple CRUD App</h1>
+
+    <!-- Create and Update Form -->
+    <form id="createForm" action="/create" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Create</button>
+    </form>
+
+    <!-- Update Form -->
+    <form id="updateForm" action="/update" method="POST">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required>
+        <label for="newName">New Name:</label>
+        <input type="text" id="newName" name="newName" required>
+        <button type="submit">Update</button>
+    </form>
+
+    <!-- Delete Form -->
+    <form id="deleteForm" action="/delete" method="POST">
+        <label for="deleteId">ID:</label>
+        <input type="text" id="deleteId" name="id" required>
+        <button type="submit">Delete</button>
+    </form>
+
+ <!-- Read / List Entries -->
+ <button onclick="window.location.href='/read'">View All Entries</button>
+
+</body>
+</html>
